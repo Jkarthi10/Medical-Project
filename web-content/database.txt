@@ -1,0 +1,107 @@
+
+create database medical;
+-------------------------------------------------------------------------------------
+
+create table hospitals(
+id int not null primary key auto_increment,
+hospname varchar(80),
+address varchar(70),
+pincode int,
+city varchar(60),
+state varchar(50),
+contact varchar(40),
+otp int ,
+email varchar(40), 
+password varchar(40), 
+speciality varchar(40)
+);
+-------------------------------------------------------------------------------------
+
+create table users(
+id  int not null primary key auto_increment,
+name varchar(80) ,
+dob varchar(12) ,
+address varchar(70) ,
+pincode varchar(6) ,
+state varchar(50) ,
+gender varchar(10) ,
+contact varchar(15) ,
+email varchar(40) ,
+password varchar(40) ,
+otp int );
+
+----------------------------------------------------------------------------------------
+
+create table pharmacy(
+id  int not null primary key auto_increment,
+pharmname varchar(50) ,
+contact varchar(15) ,
+address varchar(60) ,
+pincode varchar(10) ,
+state varchar(30), 
+otp int,
+email varchar(40),
+password varchar(30)
+);
+
+-----------------------------------------------------------------------------------------
+
+create table ordermed(
+id  int not null primary key auto_increment,
+pharmid  int not null,
+pname varchar(40) not null,
+name varchar(40) not null,
+email varchar(50) ,
+contact varchar(15) not null,
+address varchar(80) not null,
+drug varchar(2000) not null,
+prescription longblob,
+filename varchar(50)
+);
+
+----------------------------------------------------------------------------------------
+
+create table lab(
+id int not null primary key auto_increment, 
+admin varchar(50),
+labname varchar(50),
+email varchar(40),
+password varchar(40),
+contact varchar(15),
+address varchar(60),
+pincode varchar(10), 
+homesample varchar(30),
+otp int
+);
+
+---------------------------------------------------------------------------------------------
+
+create table labreport(
+id int not null primary key auto_increment,
+labid int not null,
+labname varchar(40) not null, 
+name varchar(40) not null, 
+email varchar(50) not null, 
+contact varchar(15) not null, 
+address varchar(80) not null, 
+typeoftype varchar(200) not null, 
+result longblob not null, 
+filename varchar(50)not null, 
+);
+
+---------------------------------------------------------------------------------------------
+
+create table labappointment(
+id int not null  primary key auto_increment, 
+labid int not null,
+labname varchar(40) not null,
+pname varchar(40) not null,
+paddress varchar(70) not null,
+pcontact varchar(30) not null,
+pemail varchar(40) not null,
+timeslot varchar(30) not null,
+typeoftest varchar(40) not null,
+admin varchar(40) not null,
+);
+
+--------------------------------------------------------------------------------------------
