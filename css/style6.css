@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./bg.jpg);
+    overflow: hidden;
+}
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+  }
+  .card-image {
+    grid-area: image;
+  }
+ 
+  .card-stats {
+    grid-area: stats; 
+  }
+  .card-image {
+    grid-area: image;
+    background: url("./hosp.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+ 
+  .card-stats {
+    grid-area: stats; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(255, 7, 110);
+  }
+ 
+  .card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  .card {
+ 
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+  }
+  .card-text input{
+      padding: 10px 30px;
+      border: none;
+      background-color: rgba(238, 149, 16, 0.692);
+      font-size: 18px;
+      font-weight: 400;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .card-text input:hover{
+      background-color:rgb(255, 145, 1);
+      color: black;
+  }
+
+/* Card 2*/
+
+.card1 {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+  }
+  .card-image1 {
+    grid-area: image;
+  }
+ 
+  .card-stats1 {
+    grid-area: stats; 
+  }
+  .card-image1 {
+    grid-area: image;
+    background: url("./lab.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+ 
+  .card-stats1 {
+    grid-area: stats; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(255, 7, 110);
+  }
+ 
+  .card1:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  .card1 { 
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+}
+.card-text1 input{
+    padding: 10px 30px;
+    border: none;
+    background-color: rgba(34, 238, 16, 0.61);
+    font-size: 18px;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-text1 input:hover{
+    background-color:rgb(30, 255, 0);
+    color: black;
+}
+
+/*Card 3 */
+
+.card2 {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+  }
+  .card-image2 {
+    grid-area: image;
+  }
+ 
+  .card-stats2 {
+    grid-area: stats; 
+  }
+  .card-image2 {
+    grid-area: image;
+    background: url("./pharm.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+ 
+  .card-stats2 {
+    grid-area: stats; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(255, 7, 110);
+  }
+ 
+  .card2:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  .card2 {
+ 
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+  }
+  .card-text2 input{
+    padding: 10px 30px;
+    border: none;
+    background-color: rgba(63, 184, 221, 0.637);
+    font-size: 18px;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-text2 input:hover{
+    background-color:rgb(1, 153, 255);
+    color: black;
+}
+@media (max-width: 1040px){
+    body{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        background: url(./bg.jpg);
+        overflow: scroll;
+    }
+    .card {
+        width: 300px;
+        
+       }
+    .card1 {
+       width: 300px;
+       
+      }
+      .card2 {
+        width: 300px;
+        
+       }
+}
+
